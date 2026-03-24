@@ -30,10 +30,6 @@ jobs:
       - name: Create Zip Archive
         # 如果是构建产物，这里把产物目录（如 .output/public）打包
         run: zip -r release.zip .output/public
-      # ... (接着执行 Publish GitHub Release 步骤)
-      - name: Create Zip Archive
-        # 将当前目录下的所有文件打包成 release.zip，并排除 .git 隐藏目录
-        run: zip -r release.zip . -x "*.git*"
 
       - name: Publish GitHub Release
         uses: softprops/action-gh-release@v2
