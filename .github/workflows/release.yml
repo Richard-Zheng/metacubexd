@@ -35,6 +35,6 @@ jobs:
         uses: softprops/action-gh-release@v2
         with:
           files: release.zip
-          generate_release_notes: false # 不自动生成更新说明，保持极简
+          tag_name: "v1.243.0"
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
